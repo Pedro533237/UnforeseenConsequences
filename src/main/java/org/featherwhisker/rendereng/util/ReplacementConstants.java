@@ -1,7 +1,5 @@
 package org.featherwhisker.rendereng.util;
 
-import com.mojang.blaze3d.platform.GlConst;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.OptionalInt;
@@ -16,8 +14,11 @@ public class ReplacementConstants {
 
     static {
         int GL_DEPTH_COMPONENT32F = 36012;
+        int GL_RGBA8 = 32856;
+        int GL_RGBA = 6408;
+        int GL_DEPTH_COMPONENT = 6402;
 
-        CONSTANTS.put(GlConst.GL_RGBA8, GlConst.GL_RGBA);
-        CONSTANTS.put(GlConst.GL_DEPTH_COMPONENT, GL_DEPTH_COMPONENT32F);
+        CONSTANTS.put(GL_RGBA8, GL_RGBA);
+        CONSTANTS.put(GL_DEPTH_COMPONENT, GL_DEPTH_COMPONENT32F);
     }
 }

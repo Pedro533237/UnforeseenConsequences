@@ -16,13 +16,13 @@ public class GlStateManagerMixin {
      * @reason Not supported in OGL ES
      */
     @Overwrite
-    public static void logicOp(int op) {}
+    public static void _logicOp(int op) {}
     /**
      * @author Featherwhisker
      * @reason Not supported in OGL ES
      */
     @Overwrite
-    public static void getTexImage(int target, int level, int format, int type, long pixels) {}
+    public static void _getTexImage(int target, int level, int format, int type, long pixels) {}
     /**
      * @author Featherwhisker
      * @reason Not supported in OGL ES
@@ -34,14 +34,14 @@ public class GlStateManagerMixin {
      * @reason Not supported in OGL ES
      */
     @Overwrite
-    public static void drawPixels(int width, int height, int format, int type, long pixels) {}
+    public static void _drawPixels(int width, int height, int format, int type, long pixels) {}
 
     @Inject(
             method = "texParameter",
             at=@At("HEAD"),
             cancellable = true
     )
-    private static void texParameter(int a, int b, float c, CallbackInfo call) {
+    private static void _texParameter(int a, int b, float c, CallbackInfo call) {
         if (a == GL_TEXTURE_2D && b == GL_TEXTURE_LOD_BIAS) {
             call.cancel();
         }

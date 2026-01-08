@@ -11,11 +11,11 @@ public class RenderSystemMixin {
      * @reason why not
      */
     @Overwrite
-    public static void logicOp(Object op) {}
+    public static void _logicOp(Object op) {}
     /**
      * @author Featherwhisker
      * @reason why not
      */
     @Overwrite
-    public static void polygonMode(int face, int mode) {}
+    public static void _polygonMode(int face, int mode) {}
 }

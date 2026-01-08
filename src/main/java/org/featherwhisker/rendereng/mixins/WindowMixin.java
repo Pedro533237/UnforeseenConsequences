@@ -18,7 +18,7 @@ public class WindowMixin {
     @Inject(method = "<init>", at = @At(value = "INVOKE",remap = false, target = "org/lwjgl/glfw/GLFW.glfwCreateWindow (IILjava/lang/CharSequence;JJ)J", shift = At.Shift.BEFORE))
     public void injected(CallbackInfo ci) {
         //Get frame name
-        String frameName = "Minecraft "+MinecraftVersion.create().getId();
+        String frameName = "Minecraft 1.21.9";
 
         // Throw out whatever vanilla tells GLFW
         glfwDefaultWindowHints();

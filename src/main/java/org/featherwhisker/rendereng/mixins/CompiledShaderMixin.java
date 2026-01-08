@@ -29,7 +29,7 @@ public class CompiledShaderMixin {
 		glShaderSource(i, ShaderConverter.convert(source));
 	}
 	@Inject(method = "compile", at = @At(value = "HEAD"))
-	private static void compileHead(Identifier id, ShaderProgram.Type type, String source, CallbackInfoReturnable<CompiledShader> info){
+	private static void compileHead(Identifier id, Object type, String source, CallbackInfoReturnable<CompiledShader> info){
 		if(debugMode) log.info("Compiling shader: {}:{}", id.getNamespace(), id.getPath());
 	}
 }

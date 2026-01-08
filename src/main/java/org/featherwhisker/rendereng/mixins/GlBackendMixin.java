@@ -1,7 +1,7 @@
 package org.featherwhisker.rendereng.mixins;
 
 import com.mojang.blaze3d.pipeline.RenderPipeline;
-import net.minecraft.client.gl.ShaderType;
+import com.mojang.blaze3d.shaders.ShaderType;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.textures.TextureFormat;
 import net.minecraft.client.gl.GlBackend;

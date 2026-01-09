@@ -3,6 +3,7 @@
   "minVersion": "0.8",
   "package": "org.featherwhisker.rendereng.mixins",
   "compatibilityLevel": "JAVA_21",
+  "refmap": "unforeseenconsequences.refmap.json",
   "client": [
     "GlBackendMixin",
     "WindowMixin",

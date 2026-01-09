@@ -12,7 +12,7 @@ import static org.lwjgl.opengl.GL30.*;
 @Mixin(WindowFramebuffer.class)
 public class WindowFBMixin {
 
-    @Redirect(method = "init", at = @At(value = "INVOKE", target = "Lorg/lwjgl/opengl/GL11;glTexParameteri(III)V"))
+    @Redirect(method = "createColorAttachment", at = @At(value = "INVOKE", target = "Lorg/lwjgl/opengl/GL11;glTexParameteri(III)V"))
     private static void texParameterWrap(int i1, int i2, int i3){
         glTexParameteri(i1, i2, i3);
         main.log.info("Tex parameter bound!, err: {}", glGetError());
